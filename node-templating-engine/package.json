@@ -1,0 +1,18 @@
+{
+  "name": "node-templating-engine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "16.19.0"
+  },
+  "scripts": {
+    "start": "node --watch index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}

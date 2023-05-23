@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ejs</title>
+</head>
+
+<body>
+    <h1>
+      <%= title %>
+    </h1>
+    <% if (students && students.length> 0) { %>
+      <ul>
+        <% students.forEach((item, index)=> { %>
+          <li>#<%= (index + 1) %>
+          </li>
+          <li>Name: <%= item.name %>
+          </li>
+          <li>Email: <%= item.email %>
+          </li>
+          <% if (item.hobbies && item.hobbies.length> 0) { %>
+            <li>
+              Hobbies are:
+              <ul>
+                <% item.hobbies.forEach((hobby)=> { %>
+                  <li>
+                    <%= hobby %>
+                  </li>
+                  <% }) %>
+              </ul>
+            </li>
+            <% } else { %>
+              <li>No hobbies found.</li>
+              <% } %>
+                <br />
+                <br />
+                <% }) %>
+      </ul>
+      <% } else { %>
+        <p>No students found.</p>
+        <% } %>
+</body>
+
+</html>
